@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+body {
+
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-dark-blue-main);
+}
+
+
+.criptoCard {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    min-width: 280px;
+    background-color: var(--very-dark-blue-card);
+    padding: 25px;
+    border-radius: 25px;
+    margin: 15px;
+}
+
+.criptoCard__Img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.criptoCard__imgContainer {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+
+}
+.criptoCard__imgContainer::before{
+    content: "";
+    position: absolute;
+    background-color: var(--cyan);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+    opacity: .5;
+    transform: translate(100%);
+    transition: transform .1s;
+    
+}
+
+.overlay {
+   
+    position: absolute;
+    margin: 45% auto;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    
+
+}
+
+.criptoCard__imgContainer:hover .overlay {
+    visibility: visible;
+    
+    
+    
+}
+.criptoCard__imgContainer:hover::before {
+    
+    transform: translate(0);
+}
+
+.criptoCard__title {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+    cursor: pointer;
+
+
+}
+
+.criptoCard__title:hover {
+    color: var(--cyan);
+
+}
+
+.criptoCard__paragraph {
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--soft-blue);
+}
+
+.criptoCard__data {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--very-dark-blue-line);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+
+
+}
+
+.criptoCard__dataContainer {
+    display: flex;
+    max-height: 20px;
+}
+
+.criptoCard__datas {
+    font-size: 18px;
+    margin-left: 7px;
+}
+
+.criptoCard__eth {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.criptoCard__days {
+    color: var(--soft-blue);
+}
+
+.criptoCard__credits {
+    display: flex;
+    gap: 15px;
+}
+
+.criptoCard__credit {
+    text-align: center;
+    margin: auto 0;
+    color: var(--soft-blue);
+}
+
+.criptoCard__autor {
+    color: white;
+    cursor: pointer;
+}
+
+.criptoCard__autor:hover {
+    color: var(--cyan);
+}
+
+.criptoCard__credits img {
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 35px;
+
+}
