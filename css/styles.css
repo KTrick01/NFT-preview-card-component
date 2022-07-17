@@ -55,6 +55,8 @@ body {
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    border-radius: 10px;
+    
 
 
 }
