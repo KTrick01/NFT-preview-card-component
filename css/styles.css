@@ -85,13 +85,9 @@ body {
 }
 
 .criptoCard__imgContainer:hover .overlay {
-    visibility: visible;
-    
-    
-    
+    visibility: visible;  
 }
 .criptoCard__imgContainer:hover::before {
-    
     transform: translate(0);
 }
 
